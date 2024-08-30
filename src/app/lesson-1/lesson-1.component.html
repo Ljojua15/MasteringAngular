@@ -1,1 +1,10 @@
-<p>lesson-1 works!</p>
+<p>Name:</p>
+<input type="text" [(ngModel)]="name" placeholder="Enter name ...">
+<hr>
+<h1>Bye {{name}}</h1>
+
+<button (click)="display('sdd')">click</button>
+
+<input type="text" (keydown)="keyPress($event)">
+
+
