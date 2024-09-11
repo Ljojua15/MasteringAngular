@@ -1,0 +1,57 @@
+<div class="main-btns">
+  <button (click)="changeTab('less')">LESSON2</button>
+  <button (click)="changeTab('port')">PORTPOLIO-BUILDER</button>
+</div>
+<hr>
+@if (tab === 'less') {
+
+      <div>
+        <h1>Angular Directives</h1>
+
+        <table>
+          <thead>
+            <tr class="test">
+              <th>Id:</th>
+              <th>Name:</th>
+              <th>known:</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for(dir of directive(); track dir.id){
+              <tr *ngIf="dir.usefull">
+                <td>{{dir.id}}</td>
+                <td>{{dir.name}}</td>
+                <td [ngStyle]="{'background-color': dir.color}" >{{dir.usefull}}</td>
+              </tr>
+            }@empty {
+              <h2>not found !</h2>
+            }
+          </tbody>
+        </table>
+      </div>
+
+
+      <hr>
+
+      <div class="ngSwich">
+        <h1>NgSwich</h1>
+        <label> Enter Your Age</label>
+        <input type="text" (input)="checkAge()" [(ngModel)] = "age">
+
+        <div [ngSwitch]="isOlder">
+          <p *ngSwitchCase="true">aris</p>
+          <p *ngSwitchDefault>ar aris</p>
+        </div>
+      </div>
+
+
+} @else {<app-portfolio-builder/>}
+
+
+
+
+
+
+
+
+

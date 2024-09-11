@@ -1,0 +1,69 @@
+<h1>პორტფოლიო</h1>
+
+<ng-container *ngIf="!submitted; else prev">
+  <h2>პერსონალური ინფორმაცია</h2>
+  <form>
+    <div>
+      <label for="name">სახელი</label>
+      <input type="text" name="name" id="name" [(ngModel)]="nm">
+    </div>
+    <div>
+      <label for="gmail">მეილი</label>
+      <input type="text" name="gmail" id="gmail" [(ngModel)]="em">
+    </div>
+    <div>
+      <label for="phone">ნომერი</label>
+      <input type="text" name="phone" id="phone" [(ngModel)]="ph">
+    </div>
+    <div>
+      <label for="address">მისამართო</label>
+      <input type="text" name="address" id="address" [(ngModel)]="add">
+    </div>
+  </form>
+
+  <h2>გამოცდილება</h2>
+  <div *ngFor="let q of qualif; let i = index">
+    <h3>გამოცდილება {{i+1}}</h3>
+    <form>
+      <div>
+        <label for="school">სკოლა/უნი</label>
+        <input type="text" name="school" id="school" [(ngModel)]="q.school">
+      </div>
+      <div>
+        <label for="degree">ხარისხი</label>
+        <input type="text" name="degree" id="degree" [(ngModel)]="q.degree">
+      </div>
+      <div>
+        <label for="phone">წელი</label>
+        <input type="text" name="phone" id="phone" [(ngModel)]="q.year">
+      </div>
+    </form>
+  </div>
+
+  <div class="btns">
+    <button (click)="addQualif()">დამატება</button>
+    <button (click)="subm()">შეჯამება</button>
+  </div>
+</ng-container>
+
+<ng-template #prev>
+  <div class="after-sub">
+    <h2>result</h2>
+    <div>
+      <p>{{nm}}</p>
+      <p>email:{{em}}</p>
+      <p>phone:{{ph}}</p>
+      <p>address:{{add}}</p>
+    </div>
+    <div>
+      <h2>qualification</h2>
+      <div *ngFor="let q of qualif">
+        <p>school: {{q.school}}</p>
+        <p>degree: {{q.degree}} {{q.school}}</p>
+      </div>
+    </div>
+    <button (click)="edit()">edit</button>
+  </div>
+
+</ng-template>
+

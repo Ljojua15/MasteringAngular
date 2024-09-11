@@ -6,5 +6,19 @@
 <button (click)="display('sdd')">click</button>
 
 <input type="text" (keydown)="keyPress($event)">
+<hr>
+<button (click)="show = !show"> click</button>
+
+<div *ngIf="show">
+  <div  class="start" *ngFor="let val of wheels; track: trackbyIndex">
+    <ul>
+      <li>{{val.id}}{{val.track}}</li>
+      <li>{{val.wheel}}</li>
+      <li>{{val.color}}</li>
+      <li>{{val.mark}}</li>
 
 
+    </ul>
+  </div>
+
+</div>
