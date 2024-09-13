@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="container__parent">
+    <h2>Data from Main Component</h2>
+    <pre>{{courses | json}}</pre>
+  </div>
+  <div class="container__child">
+    <h2>child Component</h2>
+    <app-parameter-decorators [childCourses]="courses"></app-parameter-decorators>
+  </div>
+</div>

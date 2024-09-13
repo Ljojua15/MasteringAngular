@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { Lesson1Component } from './lesson-1/lesson-1.component';
 import { AngularDirectivesComponent } from './angular-directives/angular-directives.component';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { AngularDecoratorsComponent } from './angular-decorators/angular-decorators.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.compo
     Lesson1Component,
     AngularDirectivesComponent,
     LifecycleHooksComponent,
+    AngularDecoratorsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
