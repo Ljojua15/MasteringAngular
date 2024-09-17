@@ -1,0 +1,22 @@
+<h2>Child Comp</h2>
+
+<!-- <h3>{{fromChild}}</h3> -->
+
+<button (click)="changeNewText()">click</button>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of childCourses">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+    </tr>
+  </tbody>
+</table>
+
+

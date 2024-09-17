@@ -1,14 +1,39 @@
 import { CommonModule } from "@angular/common";
 import { Component, Input } from "@angular/core";
+import { InputOutputComponent } from "./input-output/input-output.component";
 
 @Component({
   selector: "app-parameter-decorators",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, InputOutputComponent],
   templateUrl: "./parameter-decorators.component.html",
   styleUrl: "./parameter-decorators.component.scss",
 })
 export class ParameterDecoratorsComponent {
-  @Input() childvalue!: string;
-  @Input() childCourses!: { id: number; name: string }[];
+  value: string = "15/may/1998";
+
+  fromChild: string = "";
+
+  courses: { id: number; name: string }[] = [
+    {
+      id: 1,
+      name: "JavaScript Marathon Interview -Questions Series",
+    },
+    {
+      id: 2,
+      name: "Mastering React With InterviewQuestions, eStore Project",
+    },
+    {
+      id: 3,
+      name: "Mastering TypeScript With MarathodInterview Questions",
+    },
+    {
+      id: 4,
+      name: "Mastering HTML, CSS, Sass, Bootstrap + Interview Questions",
+    },
+  ];
+
+  recieve(data: string) {
+    this.fromChild = data;
+  }
 }
