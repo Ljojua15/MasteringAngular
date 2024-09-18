@@ -26,6 +26,13 @@ export class InputOutputComponent {
 
   hasCloseAnimation: boolean = false;
 
+  id!: number;
+  textIn!: string;
+
+  addOnArray(id: number, textIn: string) {
+    this.childCourses.push({ id: id, name: textIn });
+  }
+
   changeNewText() {
     this.text.emit('from Child to Patent');
     console.log('lukaa');

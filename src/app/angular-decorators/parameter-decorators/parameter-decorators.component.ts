@@ -41,7 +41,4 @@ export class ParameterDecoratorsComponent {
   openPopup() {
     this.isRedPopupOpen = true;
   }
-  onGetE(e: any) {
-    console.log(e);
-  }
 }
