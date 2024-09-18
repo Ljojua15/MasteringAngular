@@ -1,0 +1,18 @@
+.parent{
+  width: 1000px;
+  height: 800px;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  button{
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+  }
+}
+.pointer{
+  pointer-events: none;
+}

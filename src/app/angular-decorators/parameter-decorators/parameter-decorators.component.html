@@ -5,6 +5,12 @@
 <app-input-output (text)="recieve($event)" [childCourses]="courses"></app-input-output>
 
 
+<div class="parent">
+  <button [ngClass]="{pointer: isRedPopupOpen}" (click)="openPopup()">click to open Popup</button>
+  <app-input-output  *ngIf="isRedPopupOpen" (close)="isRedPopupOpen = false"></app-input-output>
+</div>
+
+
 
 
 

@@ -1,0 +1,93 @@
+.info-popup{
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  position: relative;
+  animation: lashAnim .3s ease forwards;
+
+  &__close{
+    position: absolute;
+    font-size: 30px;
+    right: 10px;
+    top: 10px;
+    color: blanchedalmond;
+    cursor: pointer;
+  }
+}
+
+.closeAnimation{
+  animation: lashclose .2s ease forwards;
+}
+
+@keyframes lashAnim {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(0.1);
+  }
+  20% {
+    transform: scale(0.2);
+  }
+  30% {
+    transform: scale(0.3);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(0.6);
+  }
+  70% {
+    transform: scale(0.7);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lashclose {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  20% {
+    transform: scale(0.8);
+  }
+  30% {
+    transform: scale(0.7);
+  }
+  40% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(0.4);
+  }
+  70% {
+    transform: scale(0.3);
+  }
+  80% {
+    transform: scale(0.2);
+  }
+  90% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
