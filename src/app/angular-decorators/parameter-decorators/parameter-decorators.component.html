@@ -6,8 +6,8 @@
 
 
 <div class="parent">
-  <button [ngClass]="{pointer: isRedPopupOpen}" (click)="openPopup()">click to open Popup</button>
-  <app-input-output  *ngIf="isRedPopupOpen" (close)="isRedPopupOpen = false"></app-input-output>
+<app-popup *ngIf="isPopupOpen" (closePopup)="isPopupOpen = false"/>
+<button (click)="openPopup()">OPEN</button>
 </div>
 
 

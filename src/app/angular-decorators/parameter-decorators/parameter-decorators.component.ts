@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { InputOutputComponent } from './input-output/input-output.component';
+import { PopupComponent } from './popup/popup.component';
 
 @Component({
   selector: 'app-parameter-decorators',
   standalone: true,
-  imports: [CommonModule, InputOutputComponent],
+  imports: [CommonModule, InputOutputComponent, PopupComponent, PopupComponent],
   templateUrl: './parameter-decorators.component.html',
   styleUrl: './parameter-decorators.component.scss',
 })
@@ -13,8 +14,7 @@ export class ParameterDecoratorsComponent {
   value: string = '15/may/1998';
 
   fromChild: string = '';
-
-  isRedPopupOpen: boolean = false;
+  isPopupOpen: boolean = false;
 
   courses: { id: number; name: string }[] = [
     {
@@ -38,7 +38,8 @@ export class ParameterDecoratorsComponent {
   recieve(data: string) {
     this.fromChild = data;
   }
+
   openPopup() {
-    this.isRedPopupOpen = true;
+    this.isPopupOpen = !this.isPopupOpen;
   }
 }
