@@ -7,12 +7,13 @@ import {
   AfterViewChecked,
   AfterViewInit,
 } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { log } from 'node:console';
 
 @Component({
   selector: 'app-input-output',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './input-output.component.html',
   styleUrl: './input-output.component.scss',
 })
@@ -29,8 +30,15 @@ export class InputOutputComponent {
   id!: number;
   textIn!: string;
 
-  addOnArray(id: number, textIn: string) {
-    this.childCourses.push({ id: id, name: textIn });
+  addOnArray() {
+    if (this.id && this.textIn) {
+      const newCourse = { id: this.id, name: this.textIn };
+      this.childCourses.push(newCourse);
+      this.id = 0;
+      this.textIn = '';
+    } else {
+      console.error('Both ID and Name are required');
+    }
   }
 
   changeNewText() {

@@ -1,0 +1,17 @@
+.test{
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn{
+  cursor: pointer;
+  padding: 20px 30px;
+  border: unset;
+  border-radius: 20px;
+  background-color: aqua;
+}

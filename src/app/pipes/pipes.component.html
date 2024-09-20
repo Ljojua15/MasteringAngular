@@ -1,0 +1,11 @@
+<div class="pipes">
+  <div class="pipes__item" *ngFor="let items of travelDestinations | slice: start : end">
+    <h1>{{items.country}}</h1>
+    <img [src]="items.imgUrl" alt="*">
+    <h4>{{items.title}}</h4>
+  </div>
+  <div class="pipes__btns">
+    <button (click)="back()" [disabled]="start == 0">BACK</button>
+    <button (click)="next()" [disabled]="end >= travelDestinations.length">NEXT</button>
+  </div>
+</div>
