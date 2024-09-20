@@ -10,8 +10,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './usd-to-gel.component.scss',
 })
 export class UsdToGelComponent {
-  usd: number = 0;
-  gel: number = 0;
+  img: string =
+    'https://w7.pngwing.com/pngs/386/187/png-transparent-computer-icons-blog-change-angle-text-logo-thumbnail.png';
+  usd: any = 0;
+  gel: any = 0;
   selected: boolean = false;
   convert() {
     if (!this.selected) {
@@ -22,5 +24,13 @@ export class UsdToGelComponent {
   }
   changeCurr() {
     this.selected = !this.selected;
+  }
+
+  onInputChange(value: number) {
+    if (this.selected) {
+      this.gel = value;
+    } else {
+      this.usd = value;
+    }
   }
 }
