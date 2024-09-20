@@ -1,0 +1,31 @@
+@if(!selected){
+  <div class="usd-to-gel">
+    <div>
+      <label   for="USD">USD</label>
+    <input [(ngModel)]="usd" type="number">
+    </div>
+    <div>
+      <button (click)="convert()">Convert</button>
+      <img (click)="changeCurr()" src="https://w7.pngwing.com/pngs/386/187/png-transparent-computer-icons-blog-change-angle-text-logo-thumbnail.png" alt="*">
+    </div>
+    <div><label for="USD">GEL</label>
+      <input [(ngModel)]="gel" type="number"></div>
+    </div>
+}@else {
+ <ng-container >
+  <div class="usd-to-gel">
+    <div>
+      <label for="USD">GEL</label>
+      <input [(ngModel)]="gel" type="number">
+    </div>
+    <div>
+      <button (click)="convert()">Convert</button>
+      <img (click)="changeCurr()" src="https://w7.pngwing.com/pngs/386/187/png-transparent-computer-icons-blog-change-angle-text-logo-thumbnail.png" alt="*">
+    </div>
+    <div>
+      <label   for="USD">USD</label>
+      <input [(ngModel)]="usd" type="number">
+    </div>
+    </div>
+ </ng-container>
+}
