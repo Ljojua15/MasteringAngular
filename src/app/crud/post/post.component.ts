@@ -13,9 +13,23 @@ export class PostComponent {
 
   postData() {
     const user = {
-      id: 1,
+      id: 8,
       name: 'ABC',
-      gmail: 'abc@gmail.com',
+      age: 100,
     };
+    this.http.post('http://localhost:3000/users', user).subscribe((res) => {
+      console.log(res);
+    });
+  }
+
+  putData() {
+    const user = {
+      id: '9',
+      name: 'onlynine',
+      age: 21,
+    };
+    this.http.put(`http://localhost:3000/users/9`, user).subscribe((res) => {
+      console.log(res);
+    });
   }
 }

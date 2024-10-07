@@ -3,11 +3,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { map, Observable, tap } from 'rxjs';
+import { PostComponent } from './post/post.component';
 
 @Component({
   selector: 'app-crud',
   standalone: true,
-  imports: [HttpClientModule, FormsModule, CommonModule],
+  imports: [HttpClientModule, FormsModule, CommonModule, PostComponent],
   templateUrl: './crud.component.html',
   styleUrl: './crud.component.scss',
 })
