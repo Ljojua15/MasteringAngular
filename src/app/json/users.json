@@ -1,11 +1,6 @@
 {
   "users": [
     {
-      "id": "0",
-      "name": "newpost",
-      "age": 2
-    },
-    {
       "id": "1",
       "name": "newpost",
       "age": 2

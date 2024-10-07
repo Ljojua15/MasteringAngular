@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { log } from 'console';
 
 @Component({
   selector: 'app-post',
@@ -30,6 +31,17 @@ export class PostComponent {
     };
     this.http.put(`http://localhost:3000/users/9`, user).subscribe((res) => {
       console.log(res);
+    });
+  }
+
+  deleteData() {
+    this.http.delete('http://localhost:3000/users/0').subscribe({
+      next: () => {
+        console.log('deleted');
+      },
+      error: (err) => {
+        console.error('errr', err);
+      },
     });
   }
 }
