@@ -1,0 +1,18 @@
+<button class="button-27" role="button" (click)="getData()">DATA</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        phrase
+      </th>
+    </tr>
+  </thead>
+  <tbody *ngIf="(feData$ | async) as param">
+    <tr>
+      <td>
+        {{param.fact}}
+      </td>
+    </tr>
+  </tbody>
+</table>
