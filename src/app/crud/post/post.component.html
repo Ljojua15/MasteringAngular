@@ -1,6 +1,28 @@
-<button class="button-27" role="button" (click)="postData()">POSTDATA</button>
 
-<button class="button-28" role="button" (click)="putData()">PUTDATA</button>
 
-<button class="button-28" role="button" (click)="deleteData()">DELETEDATA</button>
+<div>
+  <div >
+    <input type="text" [(ngModel)]="id">
+    <input type="text" [(ngModel)]="name">
+    <input type="number" [(ngModel)]="age">
+  </div>
+  <div>
+    <button class="button-27" role="button" (click)="getData()">GETDATA</button>
 
+    <button class="button-27" role="button" (click)="postData()">POSTDATA</button>
+
+    <button class="button-28" role="button" (click)="putData()">PUTDATA</button>
+
+    <button class="button-28" role="button" (click)="deleteData()">DELETEDATA</button>
+
+    <div *ngIf="userData$ | async as param">
+      <div class="test" *ngFor="let item of param">
+        <p>{{item.id}}</p>
+       <p>{{item.name}}</p>
+       <p *ngIf="item.age">{{item.age}}</p>
+      </div>
+    </div>
+
+
+  </div>
+</div>

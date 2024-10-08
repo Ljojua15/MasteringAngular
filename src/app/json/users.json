@@ -2,47 +2,33 @@
   "users": [
     {
       "id": "1",
-      "name": "newpost",
-      "age": 2
+      "name": "test",
+      "age": 20
     },
     {
-      "id": 1,
+      "id": "2",
       "name": "ABC",
-      "gmail": "abc@gmail.com"
+      "age": 28
     },
     {
-      "id": 1,
-      "name": "ABC"
+      "id": "3",
+      "name": "ZXC",
+      "age": 17
     },
     {
-      "id": 102,
-      "name": "ABC",
-      "age": 100
+      "id": "4",
+      "name": "IOP",
+      "age": 189
     },
     {
-      "id": 10,
-      "name": "ABC",
-      "age": 100
+      "id": "5",
+      "name": "ASD",
+      "age": 11
     },
     {
-      "id": 10,
-      "name": "ABC",
-      "age": 100
-    },
-    {
-      "id": 10,
-      "name": "ABC",
-      "age": 100
-    },
-    {
-      "id": 9,
-      "name": "ABC",
-      "age": 100
-    },
-    {
-      "id": 8,
-      "name": "ABC",
-      "age": 100
+      "id": "10",
+      "name": "FGH",
+      "age": 22
     }
   ]
 }
