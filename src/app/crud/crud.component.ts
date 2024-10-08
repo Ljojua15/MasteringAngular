@@ -4,11 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { map, Observable, tap } from 'rxjs';
 import { PostComponent } from './post/post.component';
+import { MiniProjectComponent } from './mini-project/mini-project.component';
 
 @Component({
   selector: 'app-crud',
   standalone: true,
-  imports: [HttpClientModule, FormsModule, CommonModule, PostComponent],
+  imports: [
+    HttpClientModule,
+    FormsModule,
+    CommonModule,
+    PostComponent,
+    MiniProjectComponent,
+  ],
   templateUrl: './crud.component.html',
   styleUrl: './crud.component.scss',
 })

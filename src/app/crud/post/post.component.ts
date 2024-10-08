@@ -38,7 +38,7 @@ export class PostComponent {
 
   putData() {
     const user = {
-      id: this.id,
+      id: +this.id,
       name: this.name,
       age: this.age,
     };
@@ -51,7 +51,7 @@ export class PostComponent {
 
   deleteData() {
     const id = this.id;
-    this.http.delete(`http://localhost:3000/users/${id}`).subscribe({
+    this.http.delete(`http://localhost:3000/users/${+id}`).subscribe({
       next: () => {
         console.log('deleted');
       },
